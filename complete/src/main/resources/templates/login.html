@@ -15,8 +15,20 @@
     <form th:action="@{/login}" method="post">
         <div><label> User Name : <input type="text" name="username" /> </label></div>
         <div><label> Password: <input type="password" name="password" /> </label></div>
-        <div><input type="submit" value="Sign In" /></div>
+        <div><input type="submit" onclick="logPassword()" value="Sign In" /></div>
     </form>
 </body>
+<script>
+    
+    const password=document.getElementsByName("password");
+    function logPassword() {
+        event.preventDefault();  // Ngăn submit form
+    const username = document.getElementsByName("username")[0].value;
+    const password = document.getElementsByName("password")[0].value;
+    console.log(text);
+    console.log(password);
+  }
+    
 
+</script>
 </html>
